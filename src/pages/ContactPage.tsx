@@ -4,14 +4,14 @@ import Footer from "@/components/Footer";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
 
       {/* ═══ PAGE HERO ══════════════════════════════════════════════════════ */}
       <section className="gradient-section pt-40 pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8 bg-electric" />
             <span className="text-electric font-body text-xs font-semibold tracking-[0.3em] uppercase">
@@ -19,24 +19,24 @@ const ContactPage = () => {
             </span>
             <div className="h-px w-8 bg-electric" />
           </div>
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight px-2">
             Get in <span className="text-stroke">Touch</span>
           </h1>
-          <p className="text-primary-foreground/55 font-body text-xl max-w-xl mx-auto leading-relaxed">
+          <p className="text-primary-foreground/55 font-body text-lg sm:text-xl max-w-xl mx-auto leading-relaxed px-2">
             Whether you're ready to start or just exploring your options, our team is here to help.
           </p>
         </div>
       </section>
 
       {/* ═══ CONTACT LAYOUT ═════════════════════════════════════════════════ */}
-      <section className="py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-10 items-start">
 
             {/* Left: info cards (2/5) */}
             <div className="lg:col-span-2 flex flex-col gap-5">
               {/* Address */}
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-card hover:shadow-deep hover:border-electric/20 transition-all group">
+              <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-deep hover:border-electric/20 transition-all group">
                 <div className="w-12 h-12 gradient-electric rounded-xl flex items-center justify-center glow-electric-sm mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <MapPin className="text-primary-foreground" size={20} />
                 </div>
@@ -50,7 +50,7 @@ const ContactPage = () => {
               </div>
 
               {/* Hours */}
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-card hover:shadow-deep hover:border-electric/20 transition-all group">
+              <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-deep hover:border-electric/20 transition-all group">
                 <div className="w-12 h-12 gradient-electric rounded-xl flex items-center justify-center glow-electric-sm mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Clock className="text-primary-foreground" size={20} />
                 </div>
@@ -65,7 +65,7 @@ const ContactPage = () => {
               </div>
 
               {/* Email */}
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-card hover:shadow-deep hover:border-electric/20 transition-all group">
+              <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-deep hover:border-electric/20 transition-all group">
                 <div className="w-12 h-12 gradient-electric rounded-xl flex items-center justify-center glow-electric-sm mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Mail className="text-primary-foreground" size={20} />
                 </div>
@@ -81,14 +81,14 @@ const ContactPage = () => {
             {/* Right: team contact (3/5) */}
             <div className="lg:col-span-3 flex flex-col gap-6">
               {/* Premium call-to-action panel */}
-              <div className="gradient-section rounded-3xl p-10 relative overflow-hidden border border-electric/10">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-electric/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-electric/5 rounded-full blur-2xl pointer-events-none" />
+              <div className="gradient-section rounded-3xl p-6 sm:p-10 relative overflow-hidden border border-electric/10">
+                <div className="absolute top-0 right-0 w-32 h-32 sm:w-64 sm:h-64 bg-electric/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 bg-electric/5 rounded-full blur-2xl pointer-events-none" />
                 <div className="relative z-10">
                   <p className="text-electric font-body text-xs uppercase tracking-widest mb-3">
                     Call Us Directly
                   </p>
-                  <h2 className="font-display text-3xl font-bold text-primary-foreground mb-3 leading-tight">
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground mb-3 leading-tight">
                     Speak to Our Team
                   </h2>
                   <p className="text-primary-foreground/50 font-body text-sm mb-10 max-w-md leading-relaxed">
@@ -103,36 +103,36 @@ const ContactPage = () => {
                     ].map((c) => (
                       <div
                         key={c.name}
-                        className="glass rounded-2xl p-6 flex items-center gap-5 hover:border-electric/30 transition-colors group"
+                        className="glass rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 hover:border-electric/30 transition-colors group"
                       >
                         <div className="w-14 h-14 gradient-electric rounded-xl flex items-center justify-center glow-electric-sm shrink-0 group-hover:scale-105 transition-transform">
                           <span className="text-primary-foreground font-display font-bold text-xl">
                             {c.initial}
                           </span>
                         </div>
-                        <div className="flex-1">
-                          <p className="text-primary-foreground font-body font-semibold text-sm">
+                        <div className="flex-1 min-w-0">
+                          <p className="text-primary-foreground font-body font-semibold text-sm truncate">
                             {c.name}
                           </p>
-                          <p className="text-electric font-body text-xs">{c.role}</p>
+                          <p className="text-electric font-body text-xs truncate">{c.role}</p>
                         </div>
                         <a
                           href={`tel:${c.phone.replace(/\s/g, "")}`}
-                          className="gradient-electric text-primary-foreground font-body font-semibold text-sm px-5 py-2.5 rounded-full glow-electric-sm hover:opacity-90 transition-opacity flex items-center gap-2 group"
+                          className="gradient-electric text-primary-foreground font-body font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glow-electric-sm hover:opacity-90 transition-opacity flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center"
                         >
                           <Phone size={14} />
-                          {c.phone}
+                          <span className="whitespace-nowrap">{c.phone}</span>
                         </a>
                       </div>
                     ))}
                   </div>
 
                   <div className="mt-10 pt-8 border-t border-white/10">
-                    <div className="flex flex-wrap gap-6">
+                    <div className="flex flex-wrap gap-4 sm:gap-6">
                       {["HIPAA Compliant", "Certified Experts", "South Africa"].map((tag) => (
                         <div key={tag} className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-electric animate-pulse" />
-                          <span className="text-primary-foreground/40 font-body text-xs tracking-wide">{tag}</span>
+                          <div className="w-1.5 h-1.5 rounded-full bg-electric animate-pulse shrink-0" />
+                          <span className="text-primary-foreground/40 font-body text-xs tracking-wide whitespace-nowrap">{tag}</span>
                         </div>
                       ))}
                     </div>
@@ -141,7 +141,7 @@ const ContactPage = () => {
               </div>
 
               {/* What to expect */}
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-card">
+              <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-card">
                 <p className="font-body font-semibold text-navy text-sm uppercase tracking-wide mb-6">
                   What to Expect
                 </p>
@@ -152,9 +152,9 @@ const ContactPage = () => {
                     { step: "03", title: "Seamless Onboarding", desc: "Our team integrates with your workflow quickly and without disruption." },
                     { step: "04", title: "Ongoing Results", desc: "Regular reporting and continuous optimisation to keep your revenue growing." },
                   ].map((item) => (
-                    <div key={item.step} className="flex gap-5 items-start">
+                    <div key={item.step} className="flex gap-4 sm:gap-5 items-start">
                       <span className="text-electric font-body font-bold text-xs shrink-0 mt-1 font-mono">{item.step}</span>
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <p className="font-body font-semibold text-navy text-sm mb-1">{item.title}</p>
                         <p className="font-body text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                       </div>
