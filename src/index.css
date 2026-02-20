@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core surfaces */
+    --background: 216 25% 97%;
+    --foreground: 216 45% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 216 45% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 45% 8%;
+
+    /* Brand navy */
+    --primary: 216 75% 14%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 30% 93%;
+    --secondary-foreground: 216 75% 14%;
+
+    --muted: 214 20% 91%;
+    --muted-foreground: 215 16% 48%;
+
+    /* Electric blue accent */
+    --accent: 207 100% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 207 100% 52%;
+    --radius: 0.75rem;
+
+    /* Extended brand tokens */
+    --navy-deep:  216 85% 5%;
+    --navy:       216 75% 11%;
+    --navy-mid:   216 65% 18%;
+    --navy-light: 216 40% 26%;
+
+    --electric:       207 100% 52%;
+    --electric-light: 207 85%  68%;
+    --electric-dim:   207 60%  38%;
+
+    /* Gradients */
+    --gradient-hero:    linear-gradient(135deg, hsl(216 85% 5%) 0%, hsl(216 75% 10%) 70%, hsl(207 60% 14%) 100%);
+    --gradient-electric: linear-gradient(135deg, hsl(207 100% 52%), hsl(207 80% 42%));
+    --gradient-card:    linear-gradient(145deg, hsl(0 0% 100%), hsl(214 30% 97%));
+    --gradient-section: linear-gradient(180deg, hsl(216 85% 5%) 0%, hsl(216 75% 9%) 100%);
+
+    /* Glows */
+    --glow-electric: 0 0 60px hsl(207 100% 52% / 0.25), 0 0 20px hsl(207 100% 52% / 0.15);
+    --glow-electric-sm: 0 0 20px hsl(207 100% 52% / 0.3);
+
+    /* Shadows */
+    --shadow-card:  0 4px 32px -4px hsl(216 75% 10% / 0.12);
+    --shadow-deep:  0 20px 60px -10px hsl(216 85% 5% / 0.3);
+    --shadow-nav:   0 2px 32px hsl(216 85% 5% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+}
+
+@layer utilities {
+  /* ---- Typography ---- */
+  .font-display { font-family: 'Playfair Display', serif; }
+  .font-body    { font-family: 'Inter', sans-serif; }
+
+  /* Outlined / stroke text */
+  .text-stroke {
+    -webkit-text-stroke: 2px hsl(var(--electric));
+    color: transparent;
+  }
+  .text-stroke-white {
+    -webkit-text-stroke: 1.5px hsl(0 0% 100% / 0.5);
+    color: transparent;
+  }
+
+  /* ---- Colors ---- */
+  .text-electric { color: hsl(var(--electric)); }
+  .text-electric-light { color: hsl(var(--electric-light)); }
+  .bg-navy-deep  { background-color: hsl(var(--navy-deep)); }
+  .bg-navy       { background-color: hsl(var(--navy)); }
+  .bg-navy-mid   { background-color: hsl(var(--navy-mid)); }
+  .border-electric { border-color: hsl(var(--electric)); }
+  .border-electric\/20 { border-color: hsl(var(--electric) / 0.2); }
+
+  /* ---- Gradients ---- */
+  .gradient-hero    { background: var(--gradient-hero); }
+  .gradient-electric { background: var(--gradient-electric); }
+  .gradient-section  { background: var(--gradient-section); }
+
+  /* ---- Glow ---- */
+  .glow-electric    { box-shadow: var(--glow-electric); }
+  .glow-electric-sm { box-shadow: var(--glow-electric-sm); }
+
+  /* ---- Shadows ---- */
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-deep { box-shadow: var(--shadow-deep); }
+
+  /* ---- Glass ---- */
+  .glass {
+    background: hsl(0 0% 100% / 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 100% / 0.08);
+  }
+  .glass-light {
+    background: hsl(0 0% 100% / 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* ---- Grid pattern ---- */
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(207 100% 52% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(207 100% 52% / 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* ---- Animations ---- */
+  .animate-fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards;
+    opacity: 0;
+  }
+  .animate-fade-up-1 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s forwards; opacity: 0; }
+  .animate-fade-up-2 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.22s forwards; opacity: 0; }
+  .animate-fade-up-3 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.34s forwards; opacity: 0; }
+  .animate-fade-up-4 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.46s forwards; opacity: 0; }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent 0%, hsl(0 0% 100% / 0.06) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px hsl(207 100% 52% / 0.3); }
+  50%       { box-shadow: 0 0 50px hsl(207 100% 52% / 0.6), 0 0 80px hsl(207 100% 52% / 0.2); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth page scroll */
+html { scroll-behavior: smooth; }
