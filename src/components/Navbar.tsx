@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoImage from "@/assets/WhatsApp Image 2026-02-20 at 17.38.22.jpeg";
 
 const links = [
   { label: "Home", to: "/" },
@@ -30,13 +31,15 @@ const Navbar = () => {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 gradient-electric rounded-xl flex items-center justify-center glow-electric-sm group-hover:scale-105 transition-transform">
-            <span className="text-primary-foreground font-display font-bold text-sm">V</span>
-          </div>
-          <div>
+          <img 
+            src={logoImage} 
+            alt="Vhuthu Consolidation Logo" 
+            className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+          />
+          <div className="hidden sm:block">
             <p className="text-primary-foreground font-display font-semibold text-base leading-none tracking-wide">
               Vhuthu
             </p>

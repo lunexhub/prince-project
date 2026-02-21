@@ -52,7 +52,7 @@ const servicesPrev = [
 // ── Home page ──────────────────────────────────────────────────────────────
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden max-w-full">
       <Navbar />
 
       {/* ═══ HERO ═══════════════════════════════════════════════════════════ */}
@@ -67,9 +67,9 @@ const Index = () => {
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-grid opacity-60" />
         {/* Orb */}
-        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-electric/8 blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] rounded-full bg-electric/8 blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-16">
           <div className="max-w-3xl">
             {/* Eyebrow */}
             <div className="animate-fade-up flex items-center gap-3 mb-8">
@@ -81,10 +81,10 @@ const Index = () => {
 
             {/* Headline */}
             <h1 className="animate-fade-up-1 font-display leading-[1.05] mb-8">
-              <span className="block text-primary-foreground text-5xl md:text-7xl font-semibold">
+              <span className="block text-primary-foreground text-4xl sm:text-5xl md:text-7xl font-semibold">
                 Medical Billing
               </span>
-              <span className="block text-stroke text-6xl md:text-8xl font-bold mt-1">
+              <span className="block text-stroke text-5xl sm:text-6xl md:text-8xl font-bold mt-1">
                 MADE SIMPLE.
               </span>
             </h1>
@@ -137,7 +137,7 @@ const Index = () => {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((s) => (
               <StatCard key={s.label} {...s} />
@@ -147,8 +147,8 @@ const Index = () => {
       </section>
 
       {/* ═══ SERVICES PREVIEW ══════════════════════════════════════════════ */}
-      <section className="py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <div className="flex items-center gap-3 mb-3">
@@ -210,8 +210,8 @@ const Index = () => {
       {/* ═══ CTA BANNER ════════════════════════════════════════════════════ */}
       <section className="py-24 bg-navy-deep relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-electric/8 blur-3xl rounded-full" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[150px] sm:w-[400px] sm:h-[200px] md:w-[600px] md:h-[300px] bg-electric/8 blur-3xl rounded-full" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-electric font-body text-xs font-semibold tracking-[0.3em] uppercase mb-4">
             Get Started Today
           </p>

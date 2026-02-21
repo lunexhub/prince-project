@@ -73,14 +73,14 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden max-w-full">
       <Navbar />
 
       {/* ═══ PAGE HERO ══════════════════════════════════════════════════════ */}
       <section className="gradient-section pt-40 pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8 bg-electric" />
             <span className="text-electric font-body text-xs font-semibold tracking-[0.3em] uppercase">
@@ -99,8 +99,8 @@ const ServicesPage = () => {
       </section>
 
       {/* ═══ SERVICES LIST ══════════════════════════════════════════════════ */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col gap-8">
             {services.map((svc, i) => {
               const Icon = svc.icon;
@@ -116,7 +116,7 @@ const ServicesPage = () => {
                       isEven ? "md:order-1" : "md:order-2"
                     }`}
                   >
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-electric/10 rounded-full blur-3xl" />
+                    <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-electric/10 rounded-full blur-3xl" />
                     <div>
                       <div className="w-14 h-14 gradient-electric rounded-2xl flex items-center justify-center glow-electric-sm mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                         <Icon className="text-primary-foreground" size={24} />
@@ -166,8 +166,8 @@ const ServicesPage = () => {
       {/* ═══ CTA ════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-navy-deep relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-64 bg-electric/8 blur-3xl rounded-full" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[133px] sm:w-[300px] sm:h-[200px] md:w-96 md:h-64 bg-electric/8 blur-3xl rounded-full" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
             Ready to get started?
           </h2>

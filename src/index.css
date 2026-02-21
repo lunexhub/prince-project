@@ -79,13 +79,21 @@
   html, body {
     overflow-x: hidden;
     width: 100%;
+    max-width: 100vw;
+    position: relative;
   }
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @layer utilities {

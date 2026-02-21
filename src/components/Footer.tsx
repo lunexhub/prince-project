@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoImage from "@/assets/WhatsApp Image 2026-02-20 at 17.38.22.jpeg";
 
 const Footer = () => {
   const links = [
@@ -9,15 +10,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-navy-deep border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="bg-navy-deep border-t border-white/5 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 gradient-electric rounded-xl flex items-center justify-center glow-electric-sm">
-                <span className="text-primary-foreground font-display font-bold text-sm">V</span>
-              </div>
+              <img 
+                src={logoImage} 
+                alt="Vhuthu Consolidation Logo" 
+                className="h-10 w-auto object-contain"
+              />
               <div>
                 <p className="text-primary-foreground font-display font-semibold">Vhuthu Consolidation</p>
                 <p className="text-electric font-body text-[10px] tracking-[0.2em] uppercase">Vconsol</p>

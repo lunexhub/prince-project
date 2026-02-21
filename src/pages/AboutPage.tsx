@@ -40,14 +40,14 @@ const team = [
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden max-w-full">
       <Navbar />
 
       {/* ═══ PAGE HERO ══════════════════════════════════════════════════════ */}
       <section className="gradient-section pt-40 pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8 bg-electric" />
             <span className="text-electric font-body text-xs font-semibold tracking-[0.3em] uppercase">
@@ -65,8 +65,8 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ MISSION ════════════════════════════════════════════════════════ */}
-      <section className="py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-28 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-8 bg-electric" />
@@ -102,7 +102,7 @@ const AboutPage = () => {
 
           {/* Visual */}
           <div className="gradient-section rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-electric/10 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-electric/10 rounded-full blur-3xl" />
             <div className="grid grid-cols-2 gap-6">
               {[
                 { value: "5+", label: "Core Services" },
@@ -132,8 +132,8 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ BUSINESS OBJECTIVES ═══════════════════════════════════════════ */}
-      <section className="py-28 bg-secondary/40">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 bg-secondary/40 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px w-8 bg-electric" />
@@ -176,8 +176,8 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ TARGET MARKET ══════════════════════════════════════════════════ */}
-      <section className="py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px w-8 bg-electric" />
@@ -219,8 +219,8 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ VALUES ════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-secondary/40">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-secondary/40 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px w-8 bg-electric" />
@@ -252,8 +252,8 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ TEAM ══════════════════════════════════════════════════════════ */}
-      <section className="py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="h-px w-8 bg-electric" />
@@ -272,7 +272,7 @@ const AboutPage = () => {
               >
                 {/* Top strip */}
                 <div className="gradient-section px-10 pt-10 pb-8 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-electric/10 rounded-full blur-2xl" />
+                    <div className="absolute top-0 right-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-electric/10 rounded-full blur-2xl" />
                   <div className="w-20 h-20 gradient-electric rounded-2xl flex items-center justify-center glow-electric-sm mb-4 group-hover:scale-105 transition-transform">
                     <span className="text-primary-foreground font-display font-bold text-3xl">
                       {member.initial}
@@ -304,8 +304,8 @@ const AboutPage = () => {
       {/* ═══ CTA ════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-navy-deep relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-64 bg-electric/8 blur-3xl rounded-full" />
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[133px] sm:w-[300px] sm:h-[200px] md:w-96 md:h-64 bg-electric/8 blur-3xl rounded-full" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
             Let's work together.
           </h2>
