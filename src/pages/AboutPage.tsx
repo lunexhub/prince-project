@@ -65,8 +65,8 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ MISSION ════════════════════════════════════════════════════════ */}
-      <section className="py-28 bg-background overflow-x-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-20 md:py-28 bg-background overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-8 bg-electric" />
@@ -74,13 +74,13 @@ const AboutPage = () => {
                 Our Mission
               </span>
             </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 sm:mb-6 leading-tight">
               Redefining Medical Billing in South Africa
             </h2>
-            <p className="text-muted-foreground font-body text-lg leading-relaxed mb-6">
+            <p className="text-muted-foreground font-body text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Vhuthu Consolidation (Vconsol) aims to provide efficient and accurate medical claims submission services to healthcare providers, ensuring compliance with regulatory requirements and maximizing reimbursement. Our goal is to streamline the claims process, reduce administrative burdens, and improve cash flow for our clients.
             </p>
-            <p className="text-muted-foreground font-body text-base leading-relaxed mb-10">
+            <p className="text-muted-foreground font-body text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 md:mb-10">
               We combine certified billing expertise with modern, secure technology to deliver a service
               that is transparent, compliant, and results-driven. Our clients trust us because we treat
               their revenue as our own responsibility.
@@ -101,31 +101,31 @@ const AboutPage = () => {
           </div>
 
           {/* Visual */}
-          <div className="gradient-section rounded-3xl p-12 relative overflow-hidden">
+          <div className="gradient-section rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-electric/10 rounded-full blur-3xl" />
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
               {[
                 { value: "5+", label: "Core Services" },
                 { value: "98%", label: "Approval Rate" },
                 { value: "100%", label: "HIPAA Compliant" },
                 { value: "2025", label: "Est. Kempton Park" },
               ].map((s) => (
-                <div key={s.label} className="glass rounded-2xl p-6 text-center">
-                  <p className="text-electric font-display text-3xl font-bold">{s.value}</p>
-                  <p className="text-primary-foreground/50 font-body text-xs mt-1 uppercase tracking-wide">
+                <div key={s.label} className="glass rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 text-center">
+                  <p className="text-electric font-display text-2xl sm:text-2xl md:text-3xl font-bold leading-tight">{s.value}</p>
+                  <p className="text-primary-foreground/50 font-body text-[10px] sm:text-xs mt-1 sm:mt-1.5 uppercase tracking-wide leading-tight">
                     {s.label}
                   </p>
                 </div>
               ))}
             </div>
-            <div className="mt-6 glass rounded-2xl p-6">
-              <p className="text-primary-foreground/40 font-body text-xs uppercase tracking-widest mb-2">
+            <div className="mt-4 sm:mt-6 glass rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6">
+              <p className="text-primary-foreground/40 font-body text-[10px] sm:text-xs uppercase tracking-widest mb-2">
                 Our Location
               </p>
-              <p className="text-primary-foreground font-body font-medium">
-                46 Highveld Road
+              <p className="text-primary-foreground font-body text-sm sm:text-base font-medium">
+                61 van der walt
               </p>
-              <p className="text-primary-foreground/60 font-body text-sm">Kempton Park, 1619</p>
+              <p className="text-primary-foreground/60 font-body text-xs sm:text-sm">Kempton Park</p>
             </div>
           </div>
         </div>

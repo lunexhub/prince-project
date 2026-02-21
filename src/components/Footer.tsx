@@ -53,19 +53,19 @@ const Footer = () => {
             <p className="text-primary-foreground/30 font-body text-xs uppercase tracking-widest mb-5">Contact</p>
             <div className="flex flex-col gap-3">
               <div>
-                <p className="text-primary-foreground/40 font-body text-xs">Prince Ramanala</p>
-                <a href="tel:0659542950" className="text-electric font-body text-sm font-semibold hover:underline">
-                  065 954 2950
-                </a>
-              </div>
-              <div>
                 <p className="text-primary-foreground/40 font-body text-xs">Humbulani Siligana</p>
                 <a href="tel:0680518757" className="text-electric font-body text-sm font-semibold hover:underline">
                   068 051 8757
                 </a>
               </div>
+              <div>
+                <p className="text-primary-foreground/40 font-body text-xs">Prince Ramanala</p>
+                <a href="tel:0659542950" className="text-electric font-body text-sm font-semibold hover:underline">
+                  065 954 2950
+                </a>
+              </div>
               <p className="text-primary-foreground/40 font-body text-xs mt-2 leading-relaxed">
-                46 Highveld Road<br />Kempton Park, 1619
+                61 van der walt<br />Kempton Park
               </p>
             </div>
           </div>

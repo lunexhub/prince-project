@@ -75,10 +75,10 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:0659542950"
+            href="tel:0680518757"
             className="font-body text-sm font-medium text-primary-foreground/60 hover:text-electric transition-colors"
           >
-            065 954 2950
+            068 051 8757
           </a>
           <Link
             to="/contact"

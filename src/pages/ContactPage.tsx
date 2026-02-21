@@ -44,8 +44,8 @@ const ContactPage = () => {
                   Office Address
                 </p>
                 <p className="font-body text-muted-foreground text-base leading-relaxed">
-                  46 Highveld Road<br />
-                  Kempton Park, 1619
+                  61 van der walt<br />
+                  Kempton Park
                 </p>
               </div>
 
@@ -98,8 +98,8 @@ const ContactPage = () => {
 
                   <div className="flex flex-col gap-5">
                     {[
-                      { initial: "P", name: "Prince Ramanala", role: "Co-Founder", phone: "065 954 2950" },
                       { initial: "H", name: "Humbulani Siligana", role: "Co-Founder & CEO", phone: "068 051 8757" },
+                      { initial: "P", name: "Prince Ramanala", role: "Co-Founder", phone: "065 954 2950" },
                     ].map((c) => (
                       <div
                         key={c.name}
